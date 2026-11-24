@@ -64,17 +64,15 @@ export const FaqAccordion = () => {
           })}
         </div>
 
-        {/* WhatsApp Help micro-link */}
+        {/* Reassurance text */}
         <div className="mt-10 text-center">
           <p className="text-xs sm:text-sm text-charcoal/70">
-            Tens alguma pergunta que não está aqui?{' '}
+            Pronta para começar?{' '}
             <a
-              href={siteConfig.whatsapp.getLink()}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={siteConfig.checkoutUrl}
               className="text-forest font-semibold underline decoration-fresh hover:text-fresh transition-colors"
             >
-              Fala connosco diretamente pelo WhatsApp
+              Garante a tua vaga no programa Dietfit aqui
             </a>
           </p>
         </div>

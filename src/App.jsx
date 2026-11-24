@@ -13,7 +13,6 @@ import { HowItWorks } from './components/HowItWorks';
 import { FaqAccordion } from './components/FaqAccordion';
 import { FinalCta } from './components/FinalCta';
 import { Footer } from './components/Footer';
-import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 export function App() {
   return (
@@ -62,9 +61,6 @@ export function App() {
 
       {/* Footer */}
       <Footer />
-
-      {/* Floating WhatsApp Action Button */}
-      <FloatingWhatsApp />
     </div>
   );
 }
