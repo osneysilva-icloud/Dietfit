@@ -92,21 +92,30 @@ export const Solution = () => {
                   <span className="text-fresh font-semibold">PDF Interativo</span>
                 </div>
                 <div className="h-44 rounded-xl bg-forest p-4 text-cream flex flex-col justify-between relative overflow-hidden">
-                  <div className="absolute -right-4 -bottom-4 w-24 h-24 bg-fresh/20 rounded-full blur-xl" />
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider text-fresh font-semibold block mb-1">
-                      Guia Principal
+                  {/* Full cover background photo */}
+                  <img
+                    src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80"
+                    alt="Plano Alimentar 6 Semanas"
+                    className="absolute inset-0 w-full h-full object-cover object-center z-0"
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-forest/95 via-forest/70 to-black/60 z-5" />
+
+                  <div className="relative z-10">
+                    <span className="text-[10px] uppercase tracking-wider text-fresh font-bold block mb-1 drop-shadow">
+                      Guia Principal • 🇲🇿
                     </span>
-                    <h4 className="font-serif text-base font-semibold leading-tight">
+                    <h4 className="font-serif text-base font-semibold leading-tight drop-shadow-md text-white">
                       Plano Alimentar 6 Semanas
                     </h4>
                   </div>
-                  <div className="text-[11px] text-cream/80 bg-white/10 p-2 rounded-lg backdrop-blur-sm">
+                  <div className="relative z-10 text-[11px] text-cream/95 bg-black/40 backdrop-blur-xs p-2 rounded-lg border border-white/15">
                     ✓ Sugestões de almoço e jantar<br />
                     ✓ Ingredientes dos mercados de Moçambique
                   </div>
                 </div>
-                <p className="text-center text-xs font-medium text-forest mt-2.5">
+                <p className="text-center text-xs font-semibold text-forest mt-2.5">
                   Guia Digital Completo
                 </p>
               </div>
@@ -126,6 +135,8 @@ export const Solution = () => {
                       src="https://images.unsplash.com/photo-1530785602389-07594beb8b73?auto=format&fit=crop&w=100&q=80" 
                       alt="Coach Dietfit Moçambique"
                       className="w-7 h-7 rounded-full object-cover ring-1 ring-fresh"
+                      loading="eager"
+                      decoding="async"
                     />
                     <div>
                       <p className="font-bold text-[11px] text-white leading-none">Dietfit Mulheres Moçambique 🇲🇿</p>
@@ -161,20 +172,30 @@ export const Solution = () => {
                   <span className="text-fresh font-semibold">Prático & Colorido</span>
                 </div>
                 <div className="h-44 rounded-xl bg-beige p-4 text-forest flex flex-col justify-between relative overflow-hidden border border-beige-dark">
-                  <div>
-                    <span className="text-[10px] uppercase tracking-wider text-forest/70 font-semibold block mb-1">
+                  {/* Full cover background photo */}
+                  <img
+                    src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80"
+                    alt="Receitas Extras Moçambique"
+                    className="absolute inset-0 w-full h-full object-cover object-center z-0"
+                    loading="eager"
+                    decoding="async"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40 z-5" />
+
+                  <div className="relative z-10">
+                    <span className="text-[10px] uppercase tracking-wider text-fresh font-bold block mb-1 drop-shadow">
                       Livro de Receitas & Bónus
                     </span>
-                    <h4 className="font-serif text-base font-semibold leading-tight text-forest">
+                    <h4 className="font-serif text-base font-semibold leading-tight text-white drop-shadow-md">
                       Guia de Jejum & Águas Naturais
                     </h4>
                   </div>
-                  <div className="text-[11px] text-forest/90 bg-white/70 p-2 rounded-lg">
+                  <div className="relative z-10 text-[11px] text-cream bg-black/45 backdrop-blur-xs p-2 rounded-lg border border-white/15">
                     ✓ Águas aromatizadas refrescantes<br />
                     ✓ Lanches saudáveis sem gastar muito
                   </div>
                 </div>
-                <p className="text-center text-xs font-medium text-forest mt-2.5">
+                <p className="text-center text-xs font-semibold text-forest mt-2.5">
                   Receitário Especial
                 </p>
               </div>

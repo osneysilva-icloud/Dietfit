@@ -21,43 +21,43 @@ export const BookMockup3D = ({
   const themes = {
     emerald: {
       coverBg: 'from-[#0F3826] via-[#174A33] to-[#0A2619]',
-      accentBg: 'bg-fresh/20 text-fresh-light border-fresh/30',
+      overlayGradient: 'from-[#0A2619] via-[#0F3826]/85 to-transparent',
       badgeBg: 'bg-fresh text-forest font-bold',
       spineBg: 'from-[#0A2619] via-[#174A33] to-[#061B11]',
-      glowColor: 'rgba(109, 159, 114, 0.25)',
-      goldBorder: 'border-fresh/30'
+      glowColor: 'rgba(109, 159, 114, 0.35)',
+      goldBorder: 'border-fresh/40'
     },
     amber: {
       coverBg: 'from-[#3D2808] via-[#5C3C0B] to-[#2B1B04]',
-      accentBg: 'bg-amber-400/20 text-amber-200 border-amber-400/30',
+      overlayGradient: 'from-[#1C1102] via-[#3D2808]/85 to-transparent',
       badgeBg: 'bg-amber-400 text-stone-900 font-bold',
       spineBg: 'from-[#2B1B04] via-[#4A3008] to-[#1C1102]',
-      glowColor: 'rgba(245, 158, 11, 0.25)',
-      goldBorder: 'border-amber-400/40'
+      glowColor: 'rgba(245, 158, 11, 0.35)',
+      goldBorder: 'border-amber-400/50'
     },
     terracotta: {
       coverBg: 'from-[#3A1D1A] via-[#522924] to-[#281310]',
-      accentBg: 'bg-orange-300/20 text-orange-200 border-orange-300/30',
-      badgeBg: 'bg-orange-300 text-stone-900 font-bold',
+      overlayGradient: 'from-[#190B09] via-[#3A1D1A]/85 to-transparent',
+      badgeBg: 'bg-orange-400 text-stone-900 font-bold',
       spineBg: 'from-[#281310] via-[#43201C] to-[#190B09]',
-      glowColor: 'rgba(234, 88, 12, 0.25)',
-      goldBorder: 'border-orange-300/40'
+      glowColor: 'rgba(234, 88, 12, 0.35)',
+      goldBorder: 'border-orange-400/50'
     },
     forest: {
       coverBg: 'from-[#0C2419] via-[#153B2A] to-[#081710]',
-      accentBg: 'bg-emerald-400/20 text-emerald-200 border-emerald-400/30',
+      overlayGradient: 'from-[#081710] via-[#0C2419]/85 to-transparent',
       badgeBg: 'bg-emerald-400 text-forest font-bold',
       spineBg: 'from-[#081710] via-[#113123] to-[#040C08]',
-      glowColor: 'rgba(16, 185, 129, 0.25)',
-      goldBorder: 'border-emerald-400/40'
+      glowColor: 'rgba(16, 185, 129, 0.35)',
+      goldBorder: 'border-emerald-400/50'
     },
     midnight: {
       coverBg: 'from-[#111A24] via-[#1A2838] to-[#0B121A]',
-      accentBg: 'bg-cyan-400/20 text-cyan-200 border-cyan-400/30',
+      overlayGradient: 'from-[#070B10] via-[#111A24]/85 to-transparent',
       badgeBg: 'bg-cyan-400 text-stone-900 font-bold',
       spineBg: 'from-[#0B121A] via-[#15202E] to-[#070B10]',
-      glowColor: 'rgba(6, 182, 212, 0.25)',
-      goldBorder: 'border-cyan-400/40'
+      glowColor: 'rgba(6, 182, 212, 0.35)',
+      goldBorder: 'border-cyan-400/50'
     }
   };
 
@@ -75,17 +75,11 @@ export const BookMockup3D = ({
           style={{ background: currentTheme.glowColor }}
         />
 
-        {/* The 3D Book Object */}
-        <div 
-          className="relative preserve-3d transition-all duration-500 ease-out transform group-hover:scale-105"
-          style={{
-            transform: 'rotateY(-20deg) rotateX(6deg) rotateZ(-1deg)',
-            transformOrigin: 'center center'
-          }}
-        >
+        {/* The 3D Book Object - Mobile-first responsive orientation */}
+        <div className="book-stage-3d relative preserve-3d">
           {/* Main Hardcover Front */}
           <div 
-            className={`w-[210px] sm:w-[225px] h-[305px] sm:h-[325px] rounded-r-xl rounded-l-xs bg-gradient-to-br ${currentTheme.coverBg} text-cream p-4 relative overflow-hidden flex flex-col justify-between border-y border-r ${currentTheme.goldBorder}`}
+            className={`w-[210px] sm:w-[225px] h-[310px] sm:h-[330px] rounded-r-xl rounded-l-xs bg-gradient-to-br ${currentTheme.coverBg} text-cream p-4 relative overflow-hidden flex flex-col justify-between border-y border-r ${currentTheme.goldBorder}`}
             style={{
               boxShadow: `
                 5px 2px 0px #FAF7F0,
@@ -96,69 +90,77 @@ export const BookMockup3D = ({
               `
             }}
           >
+            {/* FULL COVER PHOTO WITH CINEMATIC LIGHTING (Ultra-Visible on Mobile & Desktop) */}
+            {coverImage ? (
+              <div className="absolute inset-0 z-0 overflow-hidden">
+                <img 
+                  src={coverImage} 
+                  alt={title} 
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
+                  loading="eager" 
+                  decoding="async"
+                />
+                {/* Upper dark vignette for top badges readability */}
+                <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/85 via-black/45 to-transparent z-10" />
+                
+                {/* Lower gradient for title & typography readability */}
+                <div className={`absolute inset-x-0 bottom-0 h-44 bg-gradient-to-t ${currentTheme.overlayGradient} z-10`} />
+                
+                {/* Subtle contrast tint */}
+                <div className="absolute inset-0 bg-black/15 z-5" />
+              </div>
+            ) : null}
+
             {/* Hardcover Spine Binding Fold / Crease Shadow on Left */}
             <div className="absolute inset-y-0 left-0 w-6 book-spine-crease z-20 pointer-events-none" />
 
             {/* Glossy Diagonal Laminate Reflection Sheen */}
             <div className="absolute inset-0 book-gloss-overlay z-20 pointer-events-none" />
 
+            {/* Ribbon Bookmark simulation */}
+            <div className="absolute -top-1 right-6 w-3.5 h-10 bg-fresh shadow-md z-30 flex flex-col justify-end">
+              <div className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[6px] border-b-forest self-center" />
+            </div>
+
             {/* Top Foil Stamp / Brand Watermark */}
-            <div className="relative z-10">
-              <div className="flex items-center justify-between gap-1 pb-2 border-b border-white/15">
-                <span className="text-[9px] font-extrabold tracking-widest uppercase text-white/90 flex items-center gap-1">
+            <div className="relative z-20">
+              <div className="flex items-center justify-between gap-1 pb-1.5 border-b border-white/20">
+                <span className="text-[9px] font-extrabold tracking-widest uppercase text-white flex items-center gap-1 drop-shadow-md">
                   <Sparkles className="w-2.5 h-2.5 text-fresh" />
                   DIETFIT • 2026
                 </span>
-                <span className="text-[8px] font-semibold text-white/70 tracking-wider">
+                <span className="text-[8px] font-bold text-white/90 tracking-wider drop-shadow-md">
                   MOÇAMBIQUE 🇲🇿
                 </span>
               </div>
 
               {/* Badge */}
-              <div className="mt-2.5">
-                <span className={`inline-block text-[9px] tracking-wider uppercase px-2 py-0.5 rounded-full ${currentTheme.badgeBg}`}>
+              <div className="mt-2">
+                <span className={`inline-block text-[9px] tracking-wider uppercase px-2.5 py-0.5 rounded-full shadow-md ${currentTheme.badgeBg}`}>
                   {badge}
                 </span>
               </div>
             </div>
 
-            {/* Center Visual Artwork: Contextual Image with Elegant Frame */}
-            {coverImage && (
-              <div className="relative z-10 my-2 rounded-lg overflow-hidden border border-white/20 shadow-md h-24 sm:h-28">
-                <img 
-                  src={coverImage} 
-                  alt={title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  loading="lazy" 
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              </div>
-            )}
-
             {/* Book Title & Typography */}
-            <div className="relative z-10 mt-auto">
-              <h4 className="font-serif text-base sm:text-lg font-bold text-cream leading-tight drop-shadow-sm mb-1">
+            <div className="relative z-20 mt-auto">
+              <h4 className="font-serif text-base sm:text-lg font-bold text-cream leading-tight drop-shadow-md mb-1">
                 {title}
               </h4>
-              <p className="text-[10px] sm:text-[11px] text-cream/75 leading-tight line-clamp-2">
+              <p className="text-[10px] sm:text-[11px] text-cream/90 leading-tight line-clamp-2 drop-shadow-sm font-medium">
                 {subtitle}
               </p>
 
               {/* Bottom Spine details */}
-              <div className="mt-2.5 pt-2 border-t border-white/15 flex items-center justify-between text-[9px] text-cream/70 font-medium">
+              <div className="mt-2.5 pt-2 border-t border-white/25 flex items-center justify-between text-[9px] text-cream/90 font-semibold drop-shadow-sm">
                 <span className="flex items-center gap-1">
-                  <BookOpen className="w-3 h-3 text-fresh-light" />
+                  <BookOpen className="w-3 h-3 text-fresh" />
                   {pages}
                 </span>
-                <span className="text-fresh-light font-bold">
+                <span className="text-fresh font-bold uppercase tracking-wider">
                   PDF HD
                 </span>
               </div>
-            </div>
-
-            {/* Ribbon Bookmark simulation */}
-            <div className="absolute -top-1 right-6 w-3.5 h-10 bg-fresh shadow-md z-30 flex flex-col justify-end">
-              <div className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[6px] border-b-forest self-center" />
             </div>
 
           </div>
@@ -221,16 +223,10 @@ export const VipAccessCard3D = ({
         {/* Glow */}
         <div className="absolute inset-0 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-fresh/30 pointer-events-none -z-10" />
 
-        {/* 3D VIP Card Object */}
-        <div 
-          className="relative preserve-3d transition-all duration-500 ease-out transform group-hover:scale-105"
-          style={{
-            transform: 'rotateY(-18deg) rotateX(8deg) rotateZ(-1deg)',
-            transformOrigin: 'center center'
-          }}
-        >
+        {/* 3D VIP Card Object - Mobile-first responsive orientation */}
+        <div className="book-stage-3d relative preserve-3d">
           <div 
-            className="w-[210px] sm:w-[225px] h-[305px] sm:h-[325px] rounded-2xl bg-gradient-to-br from-[#0B261A] via-[#16432E] to-[#071911] text-cream p-4 relative overflow-hidden flex flex-col justify-between border-2 border-fresh/40"
+            className="w-[210px] sm:w-[225px] h-[310px] sm:h-[330px] rounded-2xl bg-gradient-to-br from-[#0B261A] via-[#16432E] to-[#071911] text-cream p-4 relative overflow-hidden flex flex-col justify-between border-2 border-fresh/40"
             style={{
               boxShadow: `
                 5px 3px 0px rgba(109, 159, 114, 0.4),

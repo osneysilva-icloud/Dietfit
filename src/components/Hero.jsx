@@ -260,43 +260,63 @@ export const Hero = () => {
                         </span>
                       </div>
 
-                      {/* 3D Hardcover Book Representation */}
+                      {/* 3D Hardcover Book Representation with Full-Bleed Cover Image */}
                       <div className="relative my-2 py-1 flex justify-center">
                         <div 
-                          className="w-[145px] sm:w-[155px] h-[195px] sm:h-[210px] rounded-r-xl rounded-l-xs bg-gradient-to-br from-[#0F3826] via-[#1A4F38] to-[#0A2619] text-cream p-3 relative overflow-hidden flex flex-col justify-between border-y border-r border-fresh/50 shadow-card transform hover:scale-105 transition-transform duration-300"
+                          className="book-stage-3d w-[150px] sm:w-[160px] h-[205px] sm:h-[220px] rounded-r-xl rounded-l-xs text-cream p-3 relative overflow-hidden flex flex-col justify-between border-y border-r border-fresh/50 shadow-card"
                           style={{
                             boxShadow: '4px 2px 0px #FAF7F0, 7px 4px 0px #C7BEA5, 10px 6px 0px #FAF7F0, -10px 16px 26px rgba(0,0,0,0.5)'
                           }}
                         >
-                          {/* Book spine crease */}
-                          <div className="absolute inset-y-0 left-0 w-3.5 bg-gradient-to-r from-black/45 via-white/15 to-transparent pointer-events-none" />
-                          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
+                          {/* Full cover background photo */}
+                          <div className="absolute inset-0 z-0 overflow-hidden">
+                            <img
+                              src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80"
+                              alt="Método Dietfit Cardápios"
+                              className="w-full h-full object-cover object-center"
+                              loading="eager"
+                              decoding="async"
+                            />
+                            {/* Top & bottom readability gradients */}
+                            <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-black/85 via-black/45 to-transparent z-10" />
+                            <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-[#0A2619] via-[#0F3826]/90 to-transparent z-10" />
+                            <div className="absolute inset-0 bg-forest/20 z-5" />
+                          </div>
 
-                          <div>
-                            <div className="text-[8px] font-extrabold text-fresh tracking-widest uppercase pb-1 border-b border-white/15 flex items-center justify-between">
-                              <span>DIETFIT</span>
+                          {/* Book spine crease & gloss sheen */}
+                          <div className="absolute inset-y-0 left-0 w-3.5 bg-gradient-to-r from-black/50 via-white/15 to-transparent z-20 pointer-events-none" />
+                          <div className="absolute inset-0 book-gloss-overlay z-20 pointer-events-none" />
+
+                          {/* Ribbon bookmark simulation */}
+                          <div className="absolute -top-1 right-3 w-2.5 h-6 bg-fresh shadow-sm z-30 flex flex-col justify-end">
+                            <div className="w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-b-[4px] border-b-forest self-center" />
+                          </div>
+
+                          <div className="relative z-20">
+                            <div className="text-[8px] font-extrabold text-white tracking-widest uppercase pb-1 border-b border-white/20 flex items-center justify-between drop-shadow">
+                              <span className="text-fresh">DIETFIT</span>
                               <span>🇲🇿 MZ</span>
                             </div>
-                            <h4 className="font-serif text-xs font-bold text-cream mt-2 leading-tight">
+                          </div>
+
+                          <div className="relative z-20 mt-auto">
+                            <h4 className="font-serif text-xs font-bold text-cream leading-tight drop-shadow-md">
                               MÉTODO DIETFIT
                             </h4>
-                            <p className="text-[8px] text-fresh-light font-medium">
+                            <p className="text-[8px] text-fresh-light font-medium drop-shadow-xs">
                               7 Semanas de Transformação
                             </p>
-                          </div>
 
-                          <div className="py-1 px-1.5 rounded bg-black/40 border border-white/15 text-center">
-                            <span className="text-[8px] text-cream font-medium block">
-                              Cardápios dos Mercados
-                            </span>
-                            <span className="text-[7px] text-fresh font-semibold block">
-                              Peixe • Feijão • Ovos
-                            </span>
-                          </div>
+                            <div className="mt-1.5 py-0.5 px-1.5 rounded bg-black/45 backdrop-blur-xs border border-white/20 text-center">
+                              <span className="text-[7.5px] text-fresh font-bold block">
+                                Peixe • Feijão • Ovos
+                              </span>
+                            </div>
 
-                          <div className="pt-1.5 border-t border-white/15 flex items-center justify-between text-[7px] text-cream/80 font-medium">
-                            <span>Edição 2026</span>
-                            <span className="text-fresh font-bold">PDF HD</span>
+                            <div className="mt-1 pt-1 border-t border-white/20 flex items-center justify-between text-[7px] text-cream/90 font-medium">
+                              <span>Edição 2026</span>
+                              <span className="text-fresh font-bold">PDF HD</span>
+                            </div>
                           </div>
                         </div>
                       </div>
