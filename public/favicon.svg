@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#86B58A"/>
+      <stop offset="100%" stop-color="#6D9F72"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E4D38"/>
+      <stop offset="100%" stop-color="#113123"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular Base Badge -->
+  <circle cx="32" cy="32" r="30" fill="url(#bgGrad)" stroke="#6D9F72" stroke-width="2"/>
+
+  <!-- Stylized Brand Leaf Icon -->
+  <g transform="translate(16, 16) scale(1)">
+    <!-- Main Leaf Blade -->
+    <path d="M18 31 C7.5 31 4 20 5.5 12 C13.5 10.5 25 8 28 4 C29.5 7 31 10.5 31 16 C31 24 24.5 31 18 31 Z" 
+          fill="url(#leafGrad)"/>
+    
+    <!-- Inner Leaf Highlight -->
+    <path d="M18 29 C9 29 6.5 19.5 7.5 13 C14 11.5 24 9.5 26.5 6 C27.5 8.5 28.5 11.5 28.5 16 C28.5 22.5 23 29 18 29 Z" 
+          fill="#86B58A" opacity="0.4"/>
+
+    <!-- Crisp Vein & Stem -->
+    <path d="M5 32 C5 28 7.5 24.5 12 23.5 C16 22.8 19.5 20.5 21 19" 
+          stroke="#FAF7F0" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <path d="M12 23.5 C13.5 19.5 17.5 17 21.5 16" 
+          stroke="#FAF7F0" stroke-width="1.6" stroke-linecap="round" stroke-opacity="0.8" fill="none"/>
+  </g>
+</svg>
