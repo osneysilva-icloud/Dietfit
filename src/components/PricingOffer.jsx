@@ -166,6 +166,26 @@ export const PricingOffer = () => {
             </p>
           </div>
 
+          {/* Medical, Medication & Allergy Responsability Note */}
+          <div className="mt-6 pt-5 border-t border-cream/15 text-xs text-cream/85 relative z-10 bg-white/5 rounded-2xl p-4 sm:p-5 border border-white/10">
+            <div className="flex items-start gap-3">
+              <div className="w-6 h-6 rounded-full bg-fresh/25 text-fresh flex items-center justify-center shrink-0 mt-0.5">
+                <ShieldCheck className="w-3.5 h-3.5 text-fresh" />
+              </div>
+              <div className="space-y-1.5 text-xs text-cream/90 leading-relaxed">
+                <p className="font-bold text-fresh uppercase tracking-wider text-[11px]">
+                  Nota de Responsabilidade Médica, Medicação & Alergias
+                </p>
+                <p>
+                  O menu do Dietfit é um guia de alimentação saudável e <strong>não substitui consultas nem orientações médicas</strong>. Caso estejas a fazer algum tratamento recomendado pelo teu médico ou a tomar medicação prescrita, <strong>deves continuar e nunca suspender sem orientação médica</strong>.
+                </p>
+                <p className="text-cream/80 text-[11px]">
+                  <strong>Atenção a Alergias:</strong> Evita qualquer alimento ao qual saibas que tens alergia — tem especial atenção a mariscos no caso de produtos ou receitas com algas marinhas, assim como amendoim se tiveres alergia a amendoim. Podes sempre substituir por outros alimentos seguros sugeridos no programa.
+                </p>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>

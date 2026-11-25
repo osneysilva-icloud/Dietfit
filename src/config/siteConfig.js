@@ -303,6 +303,10 @@ export const siteConfig = {
     {
       q: "8. O programa é adequado para todas as mulheres?",
       a: "Não necessariamente. Mulheres grávidas, a amamentar, com condições médicas pré-existentes, histórico de transtornos alimentares ou necessidades nutricionais específicas devem procurar orientação de um profissional de saúde antes de iniciar qualquer plano alimentar ou jejum."
+    },
+    {
+      q: "9. Tomo medicação prescrita pelo médico ou tenho alergias alimentares (como amendoim ou mariscos). Posso fazer o programa?",
+      a: "Sim, mas com total responsabilidade: o menu do Dietfit tem carácter educativo e não substitui consultas nem orientações médicas. Caso esteja a seguir um tratamento recomendado pelo seu médico ou a tomar medicação prescrita, deve continuar rigorosamente o seu tratamento e nunca suspender a medicação sem ordem médica. Em relação a alergias, deve ter atenção e evitar todo o alimento ao qual saiba que é alérgica — ter atenção a mariscos no caso de preparações com algas marinhas, assim como amendoim se tiver alergia a amendoim. Os nossos cardápios são flexíveis e permitem substituições simples por outros alimentos locais seguros para si."
     }
   ],
 

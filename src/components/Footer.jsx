@@ -72,13 +72,27 @@ export const Footer = () => {
 
         </div>
 
-        {/* Medical & Legal Disclaimer */}
-        <div className="py-8 border-b border-cream/10 text-[11px] text-cream/60 leading-relaxed space-y-2">
+        {/* Medical, Medication & Allergy Legal Disclaimer */}
+        <div className="my-8 p-5 sm:p-6 rounded-2xl bg-white/5 border border-cream/15 text-xs text-cream/75 leading-relaxed space-y-3">
+          <div className="flex items-center gap-2 text-fresh font-bold uppercase tracking-wider text-xs">
+            <Shield className="w-4 h-4 text-fresh shrink-0" />
+            <span>Aviso de Responsabilidade Médica, Medicação & Alergias Alimentares</span>
+          </div>
+          
           <p>
-            <strong>Aviso Legal de Saúde:</strong> As informações e materiais disponibilizados pelo programa Dietfit têm caráter exclusivamente educativo, informativo e de reeducação de hábitos alimentares. O programa não substitui consultas, diagnósticos ou prescrições médicas e nutricionais individualizadas. Mulheres grávidas, lactantes, pessoas com doenças crónicas ou histórico de transtornos alimentares devem consultar o seu médico assistente antes de qualquer alteração substancial na sua dieta.
+            <strong>1. O Menu Não Substitui Orientações Médicas:</strong> Os materiais, cardápios e planos disponibilizados pelo programa Dietfit têm finalidade exclusivamente educativa e de reeducação de hábitos alimentares saudáveis. Não substituem consultas, diagnósticos, tratamentos nem prescrições médicas ou nutricionais individualizadas.
           </p>
+
           <p>
-            Os resultados de perda de peso e bem-estar variam de pessoa para pessoa em função do seu metabolismo, ponto de partida, compromisso e estilo de vida. Nenhuma promessa de resultado exato ou cura médica é feita ou garantida.
+            <strong>2. Tratamentos e Medicação Sob Orientação Médica:</strong> Caso esteja a realizar algum tratamento médico recomendado ou a tomar medicamentos prescritos pelo seu médico, <strong>deve continuar rigorosamente o seu tratamento e nunca suspender nem alterar as suas medicações</strong> sem expressa autorização e orientação do seu médico assistente.
+          </p>
+
+          <p>
+            <strong>3. Atenção Rigorosa a Alergias Alimentares:</strong> Cada participante é responsável por verificar os ingredientes sugeridos nas refeições e <strong>evitar todo e qualquer alimento ao qual tenha alergia ou intolerância conhecida</strong>. Tenha atenção especial a mariscos ou frutos do mar em caso de receitas ou produtos que contenham algas marinhas, assim como a amendoim e oleaginosas caso tenha alergia a amendoim. Os cardápios são sugestões flexíveis: faça sempre substituições seguras por outros alimentos locais simples permitidos.
+          </p>
+
+          <p className="text-[11px] text-cream/60 pt-1 border-t border-cream/10">
+            Mulheres grávidas, lactantes, pessoas com doenças crónicas ou histórico de transtornos alimentares devem obrigatoriamente consultar o seu médico assistente antes de iniciar qualquer mudança substancial na sua alimentação ou rotina de jejum. Os resultados individuais variam consoante o metabolismo e a consistência de cada participante.
           </p>
         </div>
 
