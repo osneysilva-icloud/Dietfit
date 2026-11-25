@@ -22,19 +22,16 @@ export const Navbar = () => {
       }`}
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-        {/* Brand Logo */}
+        {/* Official Brand Logo */}
         <a href="#" className="flex items-center gap-2.5 group">
-          <div className="w-9 h-9 rounded-full bg-forest flex items-center justify-center text-cream shadow-sm group-hover:scale-105 transition-transform">
-            <Leaf className="w-5 h-5 text-fresh" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-forest leading-none">
-              DIET<span className="text-fresh font-light">FIT</span>
-            </span>
-            <span className="text-[10px] uppercase tracking-widest text-charcoal/70 font-semibold mt-0.5 hidden xs:block">
-              Moçambique
-            </span>
-          </div>
+          <img 
+            src="/dietfit-logo-horizontal.png" 
+            alt="DietFit Moçambique" 
+            className="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform" 
+          />
+          <span className="text-[10px] uppercase tracking-widest text-forest/70 font-bold border-l border-forest/20 pl-2 hidden xs:block">
+            Moçambique
+          </span>
         </a>
 
         {/* Navigation Links (desktop) */}

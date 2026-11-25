@@ -10,16 +10,15 @@ export const Footer = () => {
         {/* Main Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-cream/10">
           
-          {/* Brand Info */}
+          {/* Brand Info with Official Logo */}
           <div className="md:col-span-5 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-full bg-fresh/20 flex items-center justify-center text-fresh">
-                <Leaf className="w-4 h-4" />
-              </div>
-              <span className="font-serif text-2xl font-bold tracking-tight text-cream">
-                DIET<span className="text-fresh font-light">FIT</span>
-              </span>
-            </div>
+            <a href="#" className="inline-block group">
+              <img 
+                src="/dietfit-logo-horizontal-white.png" 
+                alt="DietFit Moçambique" 
+                className="h-9 sm:h-10 w-auto object-contain group-hover:scale-105 transition-transform" 
+              />
+            </a>
             <p className="text-xs sm:text-sm text-cream/70 leading-relaxed max-w-sm">
               Um programa prático, acessível, natural e sustentável para mulheres que querem perder peso, sentir-se mais leves e cuidar de si sem extremismos em Moçambique.
             </p>

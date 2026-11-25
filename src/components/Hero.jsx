@@ -53,9 +53,9 @@ export const Hero = () => {
           {/* Left Column: Direct-Response Copy & Call-to-Action */}
           <div className="lg:col-span-6 flex flex-col items-start text-left order-2 lg:order-1">
             
-            {/* Eyebrow badge */}
+            {/* Eyebrow badge with Official Logo Symbol */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest/5 border border-forest/15 text-forest text-xs sm:text-sm font-semibold tracking-wide mb-4 sm:mb-5">
-              <span className="text-base">🇲🇿</span>
+              <img src="/dietfit-symbol-green.png" alt="DietFit Símbolo" className="w-4 h-4 object-contain" />
               <span>DIETFIT | ALIMENTAÇÃO REAL PARA MULHERES EM MOÇAMBIQUE</span>
             </div>
 
@@ -294,7 +294,10 @@ export const Hero = () => {
 
                           <div className="relative z-20">
                             <div className="text-[8px] font-extrabold text-white tracking-widest uppercase pb-1 border-b border-white/20 flex items-center justify-between drop-shadow">
-                              <span className="text-fresh">DIETFIT</span>
+                              <span className="flex items-center gap-1">
+                                <img src="/dietfit-symbol-white.png" alt="DF" className="w-3 h-3 object-contain" />
+                                <span className="text-fresh">DIETFIT</span>
+                              </span>
                               <span>🇲🇿 MZ</span>
                             </div>
                           </div>

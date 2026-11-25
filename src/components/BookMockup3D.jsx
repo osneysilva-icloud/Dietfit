@@ -122,11 +122,11 @@ export const BookMockup3D = ({
               <div className="w-0 h-0 border-l-[7px] border-l-transparent border-r-[7px] border-r-transparent border-b-[6px] border-b-forest self-center" />
             </div>
 
-            {/* Top Foil Stamp / Brand Watermark */}
+            {/* Top Foil Stamp / Brand Watermark with Official Symbol */}
             <div className="relative z-20">
               <div className="flex items-center justify-between gap-1 pb-1.5 border-b border-white/20">
-                <span className="text-[9px] font-extrabold tracking-widest uppercase text-white flex items-center gap-1 drop-shadow-md">
-                  <Sparkles className="w-2.5 h-2.5 text-fresh" />
+                <span className="text-[9px] font-extrabold tracking-widest uppercase text-white flex items-center gap-1.5 drop-shadow-md">
+                  <img src="/dietfit-symbol-white.png" alt="DF" className="w-2.5 h-2.5 object-contain" />
                   DIETFIT • 2026
                 </span>
                 <span className="text-[8px] font-bold text-white/90 tracking-wider drop-shadow-md">
@@ -238,11 +238,11 @@ export const VipAccessCard3D = ({
             {/* Diagonal Gloss Sheen */}
             <div className="absolute inset-0 book-gloss-overlay pointer-events-none" />
 
-            {/* Card Header */}
+            {/* Card Header with Official Symbol */}
             <div className="relative z-10">
               <div className="flex items-center justify-between pb-2 border-b border-white/15">
-                <span className="text-[9px] font-extrabold tracking-widest uppercase text-fresh flex items-center gap-1">
-                  <Sparkles className="w-2.5 h-2.5 text-fresh" />
+                <span className="text-[9px] font-extrabold tracking-widest uppercase text-fresh flex items-center gap-1.5">
+                  <img src="/dietfit-symbol-green.png" alt="DF" className="w-3 h-3 object-contain" />
                   VIP ACCESS PASS
                 </span>
                 <span className="text-[8px] bg-fresh/20 text-cream px-1.5 py-0.5 rounded font-mono">
