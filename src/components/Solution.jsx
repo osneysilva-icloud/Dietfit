@@ -122,24 +122,28 @@ export const Solution = () => {
                 </div>
                 <div className="h-52 rounded-xl bg-[#0b2218] p-3 flex flex-col justify-between text-xs border border-white/10">
                   <div className="flex items-center gap-2 pb-2 border-b border-white/10">
-                    <div className="w-6 h-6 rounded-full bg-fresh flex items-center justify-center text-forest font-bold text-[10px]">
-                      DF
-                    </div>
+                    <img 
+                      src="https://images.unsplash.com/photo-1530785602389-07594beb8b73?auto=format&fit=crop&w=100&q=80" 
+                      alt="Coach Dietfit Moçambique"
+                      className="w-7 h-7 rounded-full object-cover ring-1 ring-fresh"
+                    />
                     <div>
-                      <p className="font-bold text-[11px] text-white leading-none">Dietfit Mulheres</p>
-                      <p className="text-[9px] text-fresh">Acompanhamento diário</p>
+                      <p className="font-bold text-[11px] text-white leading-none">Dietfit Mulheres Moçambique 🇲🇿</p>
+                      <p className="text-[9px] text-fresh">+450 participantes ativas</p>
                     </div>
                   </div>
-                  <div className="space-y-2 py-2 text-[11px]">
+                  <div className="space-y-2 py-1.5 text-[11px]">
                     <div className="bg-forest-light/60 p-2 rounded-lg text-cream/90">
-                      "Bom dia meninas! Hoje o nosso foco é beber 2L de água e organizar o almoço com feijão e verduras frescas."
+                      <span className="text-[9px] text-fresh block font-bold">Coach Dietfit</span>
+                      "Bom dia meninas de Maputo, Beira e Matola! Hoje o foco é água com limão e o nosso peixe grelhado com couve! 🌿"
                     </div>
-                    <div className="bg-white/15 p-2 rounded-lg ml-3 text-right text-fresh-light">
-                      "Já preparei a minha marmita com batata doce e peixe grelhado! 💚"
+                    <div className="bg-white/15 p-2 rounded-lg ml-2 text-right text-fresh-light">
+                      <span className="text-[9px] text-cream/70 block">Amina (Maputo)</span>
+                      "Já preparei a minha marmita com batata doce e feijão! Menos 4kg este mês! 💚"
                     </div>
                   </div>
-                  <div className="text-center text-[10px] text-cream/60 pt-1 border-t border-white/10">
-                    Comunidade Oficial & Lives
+                  <div className="text-center text-[10px] text-cream/70 pt-1 border-t border-white/10">
+                    Comunidade Oficial & Encontros ao Vivo
                   </div>
                 </div>
                 <p className="text-center text-xs font-semibold text-cream mt-2.5">

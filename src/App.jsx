@@ -43,19 +43,19 @@ export function App() {
         {/* 7. Expected Results & Transparent Disclaimer */}
         <ExpectedResults />
 
-        {/* 8. Social Proof & Real WhatsApp Testimonials */}
+        {/* 8. Unified Social Proof (Antes e Depois + WhatsApp) */}
         <SocialProof />
 
-        {/* 9. Offer & Dominant Pricing Section */}
+        {/* 9. Offer & Official Pricing Section */}
         <PricingOffer />
 
-        {/* 10. How It Works (3 Steps) */}
+        {/* 11. How It Works (3 Steps) */}
         <HowItWorks />
 
-        {/* 11. FAQ Accordion */}
+        {/* 12. FAQ Accordion */}
         <FaqAccordion />
 
-        {/* 12. Emotional Closing Final CTA */}
+        {/* 13. Emotional Closing Final CTA */}
         <FinalCta />
       </main>
 

@@ -31,13 +31,15 @@ export const siteConfig = {
     }
   },
 
-  // CONFIGURAÇÃO DE PREÇO (Placeholder editável em Meticais - MT)
+  // CONFIGURAÇÃO OFICIAL DE PREÇO (397 MT)
   pricing: {
-    // Altere este valor para o preço final acordado (ex: "1.490 MT", "1.950 MT", etc.)
-    pricePlaceholder: "[INSERIR PREÇO EM MT]",
+    price: "397 MT",
+    pricePlaceholder: "397 MT",
+    originalPrice: "1.950 MT",
+    discount: "80%",
     currency: "MT",
     paymentMethods: "Pagamento 100% seguro via M-Pesa, E-Mola e Cartão",
-    deliveryNote: "Acesso imediato e digital após confirmação de pagamento. Recebes os materiais diretamente no teu email e és adicionada ao grupo oficial de WhatsApp.",
+    deliveryNote: "Acesso imediato e digital após confirmação de pagamento via M-Pesa, E-Mola ou Cartão. Recebes os materiais diretamente no teu email e és adicionada ao grupo oficial de WhatsApp.",
     billingType: "Acesso completo às 7 semanas de programa com todos os bónus incluídos",
   },
 
@@ -48,7 +50,11 @@ export const siteConfig = {
         id: "main-01",
         badge: "PRODUTO PRINCIPAL 01",
         title: "Plano Alimentar — 6 Semanas",
+        subtitle: "Cardápios estruturados com ingredientes moçambicanos",
         description: "Um guia organizado com sugestões de refeições para te ajudar a planear a tua alimentação, fazer escolhas melhores e manter uma rotina alimentar equilibrada com alimentos simples e acessíveis.",
+        theme: "forest",
+        pages: "64 Páginas",
+        coverImage: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=600&q=80",
         highlights: [
           "Estrutura organizada refeição a refeição",
           "Adaptação à rotina diária moçambicana",
@@ -59,7 +65,11 @@ export const siteConfig = {
         id: "main-02",
         badge: "PRODUTO PRINCIPAL 02",
         title: "Guia de Jejum Intermitente",
+        subtitle: "Aprende o método de forma segura, natural e gradual",
         description: "Um guia introdutório com informações e orientações para compreenderes o jejum intermitente e avaliares com clareza se esta abordagem é adequada para ti e para o teu estilo de vida.",
+        theme: "midnight",
+        pages: "38 Páginas",
+        coverImage: "https://images.unsplash.com/photo-1770393391946-7d9b658deec3?auto=format&fit=crop&w=600&q=80",
         highlights: [
           "Explicação clara e sem complicações médicas",
           "Como iniciar sem sofrimento",
@@ -71,33 +81,148 @@ export const siteConfig = {
       {
         id: "bonus-01",
         badge: "BÓNUS EXCLUSIVO 01",
-        title: "Águas Naturais e Receitas Refrescantes",
-        description: "Aprende a preparar bebidas naturais para complementar uma rotina de hidratação saudável, saborosa e revigorante para o teu dia a dia.",
+        title: "Águas Naturais & Sucos Detox",
+        subtitle: "Bebidas revigorantes e hidratação inteligente",
+        description: "Aprende a preparar bebidas naturais para complementar uma rotina de hidratação saudável, saborosa e revigorante para o teu dia a dia com folhas, limão e frutas locais.",
+        theme: "emerald",
+        pages: "32 Páginas",
+        estimatedValue: "450 MT",
+        format: "Ebook 3D Digital • PDF HD",
+        coverImage: "https://images.unsplash.com/photo-1556881286-fc6915169721?auto=format&fit=crop&w=600&q=80",
         icon: "Droplets"
       },
       {
         id: "bonus-02",
         badge: "BÓNUS EXCLUSIVO 02",
         title: "Lanches para Quem Treina",
-        description: "Ideias de lanches nutritivos e práticos para complementar a alimentação de quem pratica ou quer começar a praticar atividade física.",
+        subtitle: "Energia rápida, prática e económica",
+        description: "Ideias de lanches nutritivos e práticos para complementar a alimentação de quem pratica ou quer começar a praticar atividade física sem gastar fortunas.",
+        theme: "amber",
+        pages: "28 Páginas",
+        estimatedValue: "450 MT",
+        format: "Ebook 3D Digital • PDF HD",
+        coverImage: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=600&q=80",
         icon: "Dumbbell"
       },
       {
         id: "bonus-03",
         badge: "BÓNUS EXCLUSIVO 03",
         title: "Receitas Extras Dietfit",
-        description: "Mais ideias de refeições simples, saborosas e nutritivas para diversificares o teu menu sem complicação na cozinha.",
+        subtitle: "Pratos moçambicanos adaptados e saborosos",
+        description: "Mais ideias de refeições simples, saborosas e nutritivas para diversificares o teu menu sem complicação na cozinha: peixe, matapa leve e feijoadas nutritivas.",
+        theme: "terracotta",
+        pages: "45 Páginas",
+        estimatedValue: "550 MT",
+        format: "Ebook 3D Master • PDF HD",
+        coverImage: "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
         icon: "UtensilsCrossed"
       },
       {
         id: "bonus-04",
         badge: "BÓNUS EXCLUSIVO 04",
-        title: "Canal Exclusivo de Acompanhamento no WhatsApp",
+        title: "Canal VIP no WhatsApp & Lives",
+        subtitle: "Apoio diário, dúvidas em direto e comunidade acolhedora",
         description: "Um espaço acolhedor para partilhares dúvidas, receberes orientações diárias e participares em momentos de interação e encontros em grupo, incluindo lives quando disponíveis.",
+        theme: "forest",
+        estimatedValue: "750 MT",
+        isVipPass: true,
+        format: "Acesso Contínuo • WhatsApp Oficial",
         icon: "MessageCircle"
       }
     ]
   },
+
+  // COMUNIDADE MOÇAMBICANA (Avatares e representatividade)
+  communityMembers: [
+    {
+      name: "Tânia M.",
+      location: "Maputo",
+      avatar: "https://images.unsplash.com/photo-1530785602389-07594beb8b73?auto=format&fit=crop&w=200&q=80",
+      status: "-11.5 kg eliminados"
+    },
+    {
+      name: "Amina S.",
+      location: "Matola",
+      avatar: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?auto=format&fit=crop&w=200&q=80",
+      status: "-16.1 kg eliminados"
+    },
+    {
+      name: "Graça B.",
+      location: "Beira",
+      avatar: "https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?auto=format&fit=crop&w=200&q=80",
+      status: "Fez as pazes com o espelho"
+    },
+    {
+      name: "Fátima N.",
+      location: "Nampula",
+      avatar: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&w=200&q=80",
+      status: "Adeus dores na coluna"
+    }
+  ],
+
+  // PROVA SOCIAL REAL - TRANSFORMAÇÕES ANTES E DEPOIS
+  transformations: [
+    {
+      id: 1,
+      image: "/transformations/transformation-3.jpg",
+      view: "Vista Frontal",
+      category: "frontal",
+      title: "Redução Abdominal & Afunilamento de Cintura",
+      badge: "-16.1 kg Eliminados",
+      quote: "A minha barriga já se foi! Voltei a usar as minhas roupas com orgulho e confiança.",
+      story: "Mudança marcante na região do ventre e cintura, eliminando o inchaço com os planos práticos do Dietfit.",
+      weeks: "7 Semanas",
+      verified: true
+    },
+    {
+      id: 2,
+      image: "/transformations/transformation-1.jpg",
+      view: "Vista Lateral (Perfil)",
+      category: "perfil",
+      title: "Desinchaço Total e Perda de Flancos",
+      badge: "Menos Medidas na Cintura",
+      quote: "Usei a minha calça de cintura alta sem sufocar depois de tantos meses!",
+      story: "Redução drástica da projeção abdominal e melhoria visível na postura e bem-estar corporal.",
+      weeks: "7 Semanas",
+      verified: true
+    },
+    {
+      id: 3,
+      image: "/transformations/transformation-2.jpg",
+      view: "Vista Traseira (Costas)",
+      category: "costas",
+      title: "Eliminação de Dobras & Firmeza Muscular",
+      badge: "Costas Lisas & Tonificadas",
+      quote: "Com determinação e a orientação da coach, o meu corpo transformou-se sem dietas malucas.",
+      story: "Afunilamento de cintura e redução acentuada de gordura localizada nas costas e flancos.",
+      weeks: "7 Semanas",
+      verified: true
+    },
+    {
+      id: 4,
+      image: "/transformations/transformation-5.jpg",
+      view: "Vista Traseira (Evolução)",
+      category: "costas",
+      title: "Redução de Volume e Modelagem Corporal",
+      badge: "-11.5 kg Eliminados",
+      quote: "Menos dores na coluna e muito mais energia para trabalhar e cuidar de tudo.",
+      story: "Harmonização de todo o tronco e pernas com base na reeducação alimentar saudável.",
+      weeks: "Programa Dietfit",
+      verified: true
+    },
+    {
+      id: 5,
+      image: "/transformations/transformation-4.jpg",
+      view: "Vista Lateral (Evolução)",
+      category: "perfil",
+      title: "Fez as Pazes com o Espelho",
+      badge: "Autoestima Renovada",
+      quote: "Me sinto vencedora! O espelho voltou a transmitir-me confiança e amor-próprio.",
+      story: "Evolução lateral consistente, perda de retenção de líquidos e alívio do cansaço.",
+      weeks: "Programa Dietfit",
+      verified: true
+    }
+  ],
 
   // CRONOGRAMA DAS 7 SEMANAS (Jornada Educacional)
   timeline: [

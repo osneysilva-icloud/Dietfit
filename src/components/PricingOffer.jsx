@@ -1,4 +1,5 @@
 import React from 'react';
+import trans1 from '../assets/transformations/transformation-1.jpg';
 import { siteConfig } from '../config/siteConfig';
 import { 
   Check, 
@@ -12,12 +13,13 @@ import {
 
 export const PricingOffer = () => {
   const includes = [
-    "Plano alimentar prático de 6 semanas",
-    "Guia de introdução ao jejum intermitente",
-    "Bónus: Guia de águas naturais e refrescantes",
-    "Bónus: Ideias de lanches práticos para quem treina",
-    "Bónus: Livro de receitas extras Dietfit",
-    "Acesso ao canal exclusivo de acompanhamento no WhatsApp"
+    "Volume 01: Plano Alimentar Prático de 6 Semanas (Ebook 3D Digital)",
+    "Volume 02: Guia de Jejum Intermitente Passo a Passo (Ebook 3D Digital)",
+    "Bónus 01: Guia de Águas Naturais & Sucos Detox Moçambicanos (Ebook 3D)",
+    "Bónus 02: Manual de Lanches Práticos para Quem Treina (Ebook 3D)",
+    "Bónus 03: O Livro de Receitas Extras da Cozinha Moçambicana (Ebook 3D)",
+    "Bónus 04: VIP Pass — Canal Exclusivo no WhatsApp & Encontros ao Vivo",
+    "Receitas adaptadas 100% aos ingredientes e mercados locais de Moçambique"
   ];
 
   return (
@@ -77,20 +79,50 @@ export const PricingOffer = () => {
                   </span>
                 </div>
               ))}
+
+              {/* Mini Proof Badge with Real Transformation Link */}
+              <div className="mt-6 pt-5 border-t border-white/10 flex items-center gap-3 bg-white/5 p-3 rounded-2xl">
+                <a 
+                  href="#transformacoes" 
+                  className="w-14 h-14 rounded-xl overflow-hidden bg-neutral-900 shrink-0 relative border border-fresh/40 group/thumb block"
+                  title="Clica para ver as transformações"
+                >
+                  <img
+                    src={trans1}
+                    alt="Antes e depois de aluna Dietfit"
+                    className="w-full h-full object-cover group-hover/thumb:scale-110 transition-transform"
+                    loading="eager"
+                  />
+                  <span className="absolute bottom-0 inset-x-0 bg-fresh text-forest text-[8px] font-black text-center">
+                    REAL
+                  </span>
+                </a>
+                <div>
+                  <p className="text-xs font-semibold text-cream">
+                    Resultados reais documentados em fotos
+                  </p>
+                  <a 
+                    href="#transformacoes" 
+                    className="text-[11px] text-fresh-light hover:text-white font-medium underline transition-colors"
+                  >
+                    Vê as 5 fotos de Antes e Depois completas ➔
+                  </a>
+                </div>
+              </div>
             </div>
 
             {/* Price Box & CTA Button */}
             <div className="lg:col-span-5 bg-white/5 border border-white/10 rounded-2xl p-6 sm:p-7 backdrop-blur-md text-center flex flex-col items-center">
-              <span className="text-xs uppercase tracking-wider text-fresh font-semibold mb-2">
-                Investimento Único
+              <span className="text-[11px] uppercase tracking-wider text-fresh font-semibold mb-1">
+                Acesso Completo às 7 Semanas
               </span>
               
-              {/* Price display with Meticais (MT) */}
+              {/* Discreet price display */}
               <div className="my-2 flex flex-col items-center">
-                <div className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-cream tracking-tight">
-                  {siteConfig.pricing.pricePlaceholder}
+                <div className="font-serif text-3xl sm:text-4xl font-bold text-cream tracking-tight">
+                  397 MT
                 </div>
-                <span className="text-xs text-cream/70 mt-1">
+                <span className="text-[11px] text-cream/75 mt-1 font-medium">
                   Pagamento único • Sem mensalidades surpresa
                 </span>
               </div>
@@ -98,9 +130,9 @@ export const PricingOffer = () => {
               {/* Dominant Purchase CTA Button */}
               <a
                 href={siteConfig.checkoutUrl}
-                className="w-full group mt-5 py-4 px-6 rounded-xl bg-fresh text-forest font-bold text-base sm:text-lg shadow-lg hover:bg-fresh-light active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 text-center"
+                className="w-full group mt-4 py-4 px-6 rounded-xl bg-fresh text-forest font-bold text-base sm:text-lg shadow-lg hover:bg-fresh-light active:scale-[0.98] transition-all flex items-center justify-center gap-2.5 text-center"
               >
-                <span>QUERO GARANTIR O MEU ACESSO</span>
+                <span>GARANTIR A MINHA VAGA</span>
                 <ArrowRight className="w-5 h-5 text-forest group-hover:translate-x-1 transition-transform" />
               </a>
 

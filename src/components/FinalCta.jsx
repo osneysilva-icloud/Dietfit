@@ -8,9 +8,9 @@ export const FinalCta = () => {
       {/* Background Image with warm editorial styling */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1600&q=80"
-          alt="Mulher confiante e serena"
-          className="w-full h-full object-cover object-center opacity-25 filter brightness-75 contrast-125"
+          src="https://images.unsplash.com/photo-1523824921871-d6f1a15151f1?auto=format&fit=crop&w=1600&q=80"
+          alt="Mulher moçambicana radiante e feliz com a sua saúde e corpo"
+          className="w-full h-full object-cover object-center opacity-30 filter contrast-125"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-forest via-forest/90 to-forest/80" />
@@ -40,7 +40,7 @@ export const FinalCta = () => {
             href={siteConfig.checkoutUrl}
             className="w-full group inline-flex items-center justify-center gap-3 px-8 py-4 sm:py-5 rounded-2xl bg-fresh text-forest font-bold text-base sm:text-lg shadow-elevated hover:bg-fresh-light active:scale-[0.98] transition-all text-center"
           >
-            <span>SIM, QUERO COMEÇAR COM O DIETFIT</span>
+            <span>SIM, QUERO COMEÇAR A MINHA TRANSFORMAÇÃO</span>
             <ArrowRight className="w-5 h-5 text-forest group-hover:translate-x-1 transition-transform" />
           </a>
 
