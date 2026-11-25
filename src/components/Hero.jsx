@@ -1,19 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { siteConfig } from '../config/siteConfig';
-import { Sparkles, ArrowRight, CheckCircle2, ShieldCheck, HeartHandshake, Users, Star } from 'lucide-react';
+import { 
+  Sparkles, 
+  ArrowRight, 
+  CheckCircle2, 
+  ShieldCheck, 
+  HeartHandshake, 
+  Users, 
+  Star,
+  BookOpen,
+  Flame,
+  Smartphone
+} from 'lucide-react';
+
+// Direct transformation imports for maximum conversion proof
+import trans3 from '../assets/transformations/transformation-3.jpg';
+import trans1 from '../assets/transformations/transformation-1.jpg';
 
 export const Hero = () => {
+  const [activeCase, setActiveCase] = useState(0);
+
+  const transformationCases = [
+    {
+      id: 0,
+      image: trans3,
+      label: "Caso 1 • Frontal",
+      badge: "-16.1 kg Eliminados",
+      subtitle: "Aluna Real • Cintura & Abdómen",
+      duration: "7 Semanas"
+    },
+    {
+      id: 1,
+      image: trans1,
+      label: "Caso 2 • Lateral",
+      badge: "Redução Total de Flancos",
+      subtitle: "Aluna Real • Perfil & Postura",
+      duration: "7 Semanas"
+    }
+  ];
+
+  const currentCase = transformationCases[activeCase];
+
   return (
     <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden bg-gradient-to-b from-cream via-cream to-beige-light/40">
       {/* Subtle organic background decoration */}
       <div className="absolute top-10 right-0 -mr-24 w-96 h-96 bg-sage/30 rounded-full blur-3xl pointer-events-none -z-10" />
       <div className="absolute bottom-0 left-0 -ml-20 w-80 h-80 bg-fresh/10 rounded-full blur-3xl pointer-events-none -z-10" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           
-          {/* Left Column: Copy & Call-to-Action */}
-          <div className="lg:col-span-7 flex flex-col items-start text-left order-2 lg:order-1">
+          {/* Left Column: Direct-Response Copy & Call-to-Action */}
+          <div className="lg:col-span-6 flex flex-col items-start text-left order-2 lg:order-1">
             
             {/* Eyebrow badge */}
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-forest/5 border border-forest/15 text-forest text-xs sm:text-sm font-semibold tracking-wide mb-4 sm:mb-5">
@@ -22,7 +60,7 @@ export const Hero = () => {
             </div>
 
             {/* Main Headline */}
-            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-5xl text-forest font-semibold leading-[1.18] tracking-tight mb-5 sm:mb-6">
+            <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl text-forest font-semibold leading-[1.18] tracking-tight mb-5 sm:mb-6">
               Imagina perder peso{' '}
               <span className="text-fresh underline decoration-sage/60 decoration-wavy underline-offset-4 font-normal">
                 sem passar fome
@@ -42,7 +80,7 @@ export const Hero = () => {
             </div>
 
             {/* Mozambican Community Social Proof Avatars */}
-            <div className="flex items-center gap-3 mb-6 p-2 rounded-2xl bg-white/70 border border-forest/10 max-w-md w-full">
+            <div className="flex items-center gap-3 mb-6 p-2 rounded-2xl bg-white/70 border border-forest/10 max-w-md w-full shadow-xs">
               <div className="flex -space-x-2.5 overflow-hidden shrink-0">
                 {siteConfig.communityMembers.map((member, i) => (
                   <img
@@ -119,48 +157,197 @@ export const Hero = () => {
 
           </div>
 
-          {/* Right Column: Visual Lifestyle Photo with Radiant African Woman */}
-          <div className="lg:col-span-5 order-1 lg:order-2">
-            <div className="relative mx-auto max-w-md lg:max-w-none">
+          {/* Right Column: High-Converting Showcase — O Método ao Lado do Resultado Real */}
+          <div className="lg:col-span-6 order-1 lg:order-2">
+            <div className="relative mx-auto max-w-lg lg:max-w-none">
               
-              {/* Outer decorative frame */}
-              <div className="relative rounded-3xl overflow-hidden shadow-premium border-4 border-white bg-cream">
-                <img
-                  src="https://images.unsplash.com/photo-1589156280159-27698a70f29e?auto=format&fit=crop&w=900&q=80"
-                  alt="Mulher moçambicana radiante e confiante num estilo de vida saudável"
-                  className="w-full h-[380px] sm:h-[480px] lg:h-[520px] object-cover object-center transform hover:scale-105 transition-transform duration-700"
-                  loading="eager"
-                />
+              {/* Outer Master Card Frame */}
+              <div className="relative rounded-3xl bg-white/95 backdrop-blur-md p-4 sm:p-5 shadow-elevated border-2 border-forest/15 overflow-hidden">
                 
-                {/* Subtle dark gradient overlay at bottom for card readability */}
-                <div className="absolute inset-0 bg-gradient-to-t from-forest/85 via-forest/20 to-transparent" />
-
-                {/* Floating badge over image */}
-                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-2xl bg-white/95 backdrop-blur-md shadow-card border border-forest/10 flex items-center gap-3.5">
-                  <div className="w-12 h-12 rounded-xl bg-forest text-cream flex items-center justify-center shrink-0">
-                    <HeartHandshake className="w-6 h-6 text-fresh" />
-                  </div>
-                  <div>
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-fresh block">
-                      Cozinha & Mercados de Moçambique 🇲🇿
+                {/* Header Banner */}
+                <div className="flex items-center justify-between pb-3.5 mb-3.5 border-b border-forest/10">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-fresh animate-pulse"></span>
+                    <span className="text-xs sm:text-sm font-bold tracking-wide uppercase text-forest">
+                      O Método + O Resultado Comprovado
                     </span>
-                    <p className="text-xs sm:text-sm font-serif font-medium text-forest">
-                      Peixe, ovos, verduras frescas, feijão e batata doce da tua rotina.
-                    </p>
+                  </div>
+                  <div className="inline-flex items-center gap-1.5 text-[11px] font-bold text-forest bg-sage/50 px-2.5 py-1 rounded-full border border-forest/10">
+                    <span>🇲🇿</span>
+                    <span>Moçambique</span>
                   </div>
                 </div>
+
+                {/* Split Dual-Panel: Left is Transformation, Right is the Method */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4 items-stretch">
+                  
+                  {/* SUB-CARD 1: RESULTADO REAL (ANTES & DEPOIS) */}
+                  <div className="flex flex-col justify-between rounded-2xl bg-cream border border-forest/15 p-3 shadow-soft">
+                    <div>
+                      {/* Sub-header */}
+                      <div className="flex items-center justify-between mb-2">
+                        <span className="text-[11px] font-bold text-forest tracking-wider uppercase flex items-center gap-1">
+                          <Flame className="w-3.5 h-3.5 text-amber-500" />
+                          Resultado Real
+                        </span>
+                        <span className="text-[10px] font-bold text-fresh-dark bg-fresh/20 px-2 py-0.5 rounded-full">
+                          {currentCase.duration}
+                        </span>
+                      </div>
+
+                      {/* Photo Frame with High-Contrast Badges */}
+                      <div className="relative rounded-xl overflow-hidden border border-forest/10 bg-black/10 aspect-square sm:aspect-[4/5] shadow-inner">
+                        <img
+                          src={currentCase.image}
+                          alt={currentCase.subtitle}
+                          className="w-full h-full object-cover object-top"
+                          loading="eager"
+                        />
+
+                        {/* Top Badges: ANTES / DEPOIS */}
+                        <div className="absolute top-2 left-2 px-2.5 py-1 rounded-md bg-stone-900/90 backdrop-blur-xs text-white text-[10px] font-black tracking-wider uppercase shadow-md border border-white/20">
+                          Antes
+                        </div>
+                        <div className="absolute top-2 right-2 px-2.5 py-1 rounded-md bg-fresh text-white text-[10px] font-black tracking-wider uppercase shadow-md border border-white/20">
+                          Depois
+                        </div>
+
+                        {/* Floating result tag at bottom of photo */}
+                        <div className="absolute bottom-2 inset-x-2 p-2 rounded-lg bg-forest/95 backdrop-blur-md text-cream shadow-md text-center border border-fresh/30">
+                          <span className="text-xs sm:text-sm font-bold text-fresh block tracking-tight">
+                            {currentCase.badge}
+                          </span>
+                          <span className="text-[10px] text-cream/80 block font-medium">
+                            {currentCase.subtitle}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Switcher Tabs to view Frontal & Lateral Cases */}
+                    <div className="flex gap-1.5 mt-2.5 pt-2 border-t border-forest/10">
+                      {transformationCases.map((item, idx) => (
+                        <button
+                          key={item.id}
+                          type="button"
+                          onClick={() => setActiveCase(idx)}
+                          className={`flex-1 py-1.5 px-2 rounded-lg text-[10px] font-bold tracking-tight transition-all cursor-pointer ${
+                            activeCase === idx
+                              ? 'bg-forest text-cream shadow-xs scale-[1.02]'
+                              : 'bg-white text-forest/70 hover:bg-forest/5 border border-forest/10'
+                          }`}
+                        >
+                          {item.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* SUB-CARD 2: O MÉTODO DIETFIT (GUIA 3D + WHATSAPP) */}
+                  <div className="flex flex-col justify-between rounded-2xl bg-gradient-to-br from-forest via-[#133F2B] to-[#0A2619] text-cream p-3.5 sm:p-4 shadow-soft border border-fresh/30 relative overflow-hidden">
+                    {/* Background subtle radial glow */}
+                    <div className="absolute -top-10 -right-10 w-32 h-32 bg-fresh/20 rounded-full blur-2xl pointer-events-none" />
+
+                    <div>
+                      {/* Sub-header */}
+                      <div className="flex items-center justify-between mb-3 pb-2 border-b border-cream/15">
+                        <span className="text-[11px] font-bold text-fresh tracking-wider uppercase flex items-center gap-1.5">
+                          <BookOpen className="w-3.5 h-3.5 text-fresh" />
+                          O Método Dietfit
+                        </span>
+                        <span className="text-[10px] font-bold text-cream/90 bg-white/10 px-2 py-0.5 rounded-full border border-white/10">
+                          7 Semanas
+                        </span>
+                      </div>
+
+                      {/* 3D Hardcover Book Representation */}
+                      <div className="relative my-2 py-1 flex justify-center">
+                        <div 
+                          className="w-[145px] sm:w-[155px] h-[195px] sm:h-[210px] rounded-r-xl rounded-l-xs bg-gradient-to-br from-[#0F3826] via-[#1A4F38] to-[#0A2619] text-cream p-3 relative overflow-hidden flex flex-col justify-between border-y border-r border-fresh/50 shadow-card transform hover:scale-105 transition-transform duration-300"
+                          style={{
+                            boxShadow: '4px 2px 0px #FAF7F0, 7px 4px 0px #C7BEA5, 10px 6px 0px #FAF7F0, -10px 16px 26px rgba(0,0,0,0.5)'
+                          }}
+                        >
+                          {/* Book spine crease */}
+                          <div className="absolute inset-y-0 left-0 w-3.5 bg-gradient-to-r from-black/45 via-white/15 to-transparent pointer-events-none" />
+                          <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent pointer-events-none" />
+
+                          <div>
+                            <div className="text-[8px] font-extrabold text-fresh tracking-widest uppercase pb-1 border-b border-white/15 flex items-center justify-between">
+                              <span>DIETFIT</span>
+                              <span>🇲🇿 MZ</span>
+                            </div>
+                            <h4 className="font-serif text-xs font-bold text-cream mt-2 leading-tight">
+                              MÉTODO DIETFIT
+                            </h4>
+                            <p className="text-[8px] text-fresh-light font-medium">
+                              7 Semanas de Transformação
+                            </p>
+                          </div>
+
+                          <div className="py-1 px-1.5 rounded bg-black/40 border border-white/15 text-center">
+                            <span className="text-[8px] text-cream font-medium block">
+                              Cardápios dos Mercados
+                            </span>
+                            <span className="text-[7px] text-fresh font-semibold block">
+                              Peixe • Feijão • Ovos
+                            </span>
+                          </div>
+
+                          <div className="pt-1.5 border-t border-white/15 flex items-center justify-between text-[7px] text-cream/80 font-medium">
+                            <span>Edição 2026</span>
+                            <span className="text-fresh font-bold">PDF HD</span>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* What's Inside the Method */}
+                      <div className="space-y-1.5 mt-3 pt-2.5 border-t border-cream/15 text-[11px] text-cream/90">
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-fresh shrink-0" />
+                          <span>Cardápios com comida dos nossos mercados</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-fresh shrink-0" />
+                          <span>Acompanhamento diário no WhatsApp</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-fresh shrink-0" />
+                          <span>Sem passar fome nem remédios</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Direct-response reassurance footer inside method */}
+                    <div className="mt-3 pt-2 border-t border-cream/15 flex items-center justify-between text-[10px] text-cream/85">
+                      <span className="flex items-center gap-1 font-semibold text-fresh">
+                        <Smartphone className="w-3.5 h-3.5 text-fresh" />
+                        100% no Telemóvel
+                      </span>
+                      <span className="text-cream/70 font-medium">Acesso Imediato</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                {/* Bottom Trust Ribbon */}
+                <div className="mt-3.5 pt-3 border-t border-forest/10 flex flex-wrap items-center justify-between gap-2 text-[11px] text-forest font-medium">
+                  <span className="flex items-center gap-1.5">
+                    <HeartHandshake className="w-4 h-4 text-fresh" />
+                    Feito para a rotina da mulher em Moçambique
+                  </span>
+                  <span className="flex items-center gap-1.5 font-semibold text-forest">
+                    <Users className="w-4 h-4 text-fresh" />
+                    +450 moçambicanas transformadas
+                  </span>
+                </div>
+
               </div>
 
               {/* Floating aesthetic pill top-right */}
               <div className="absolute -top-3 -right-3 hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-forest text-cream text-xs font-semibold shadow-premium border border-fresh/30 animate-float">
                 <span className="w-2 h-2 rounded-full bg-fresh"></span>
-                <span>Autoestima & Leveza Real</span>
-              </div>
-
-              {/* Floating badge bottom-left */}
-              <div className="absolute -bottom-4 -left-3 hidden sm:flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white shadow-soft border border-sage-border text-forest text-xs font-medium">
-                <span className="text-base">🇲🇿</span>
-                <span>Pensado para a mulher em Moçambique</span>
+                <span>Método + Prova Real</span>
               </div>
 
             </div>
